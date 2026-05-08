@@ -10,6 +10,9 @@ _data = {
 }
 point_count = 18
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l26od"]
+bg_color = Color(0.23529412, 0.8745098, 0.8627451, 1)
+
 [node name="Game" type="Node2D" unique_id=327747119]
 y_sort_enabled = true
 script = ExtResource("1_qclsr")
@@ -58,6 +61,22 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 39
 text = "TIME 90"
 visible_characters = 7
+metadata/_edit_use_anchors_ = true
+
+[node name="XPBar" type="ProgressBar" parent="CanvasLayer" unique_id=1665603114]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -27.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/fill = SubResource("StyleBoxFlat_l26od")
+value = 100.0
 metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

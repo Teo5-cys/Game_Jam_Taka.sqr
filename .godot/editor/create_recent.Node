@@ -1,7 +1,9 @@
+CollisionShape2D
+Sprite2D
+Area2D
+ProgressBar
+CanvasLayer
 CollisionPolygon2D
 Label
-CanvasLayer
-CollisionShape2D
 StaticBody2D
-Sprite2D
 Timer
