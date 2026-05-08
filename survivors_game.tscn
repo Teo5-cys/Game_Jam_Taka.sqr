@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dun1cpardk2xw"]
+
+[ext_resource type="Script" uid="uid://dsgxioo8wstff" path="res://game.gd" id="1_qclsr"]
+[ext_resource type="PackedScene" uid="uid://dsw8raqgacxsc" path="res://player.tscn" id="2_a7q7f"]
+[ext_resource type="Texture2D" uid="uid://q5tuijwqsnc2" path="res://background.png" id="2_l26od"]
+
+[sub_resource type="Curve2D" id="Curve2D_cp6e5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -806, -371, 0, 0, 0, 0, -1004, -196, 0, 0, 0, 0, -1091, 225, 0, 0, 0, 0, -1034, 715, 0, 0, 0, 0, -780, 810, 0, 0, 0, 0, -328, 855, 0, 0, 0, 0, 154, 878, 0, 0, 0, 0, 690, 795, 0, 0, 0, 0, 1009, 658, 0, 0, 0, 0, 1164, 442, 0, 0, 0, 0, 1157, 43, 0, 0, 0, 0, 1104, -177, 0, 0, 0, 0, 971, -257, 0, 0, 0, 0, 777, -345, 0, 0, 0, 0, 656, -413, 0, 0, 0, 0, 25, -420, 0, 0, 0, 0, -795, -367, 0, 0, 0, 0, -806, -371)
+}
+point_count = 18
+
+[node name="Game" type="Node2D" unique_id=327747119]
+y_sort_enabled = true
+script = ExtResource("1_qclsr")
+
+[node name="Timer2" type="Timer" parent="." unique_id=1969242011]
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="Timer" type="Timer" parent="." unique_id=173639759]
+wait_time = 0.3
+autostart = true
+
+[node name="Player" parent="." unique_id=1174028023 instance=ExtResource("2_a7q7f")]
+
+[node name="GameOver" type="CanvasLayer" parent="." unique_id=880031702]
+unique_name_in_owner = true
+
+[node name="ColorRect" type="ColorRect" parent="GameOver" unique_id=1711581986]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.439216)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect" unique_id=970741770]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.0
+offset_top = -107.0
+offset_right = 358.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 124
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2026518299]
+z_index = -1
+position = Vector2(41, 121)
+scale = Vector2(1.4907225, 1.8202149)
+texture = ExtResource("2_l26od")
+
+[node name="ArenaBorders" type="StaticBody2D" parent="." unique_id=1805192637]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ArenaBorders" unique_id=1660025744]
+build_mode = 1
+polygon = PackedVector2Array(-837, -401, -1000, -308, -1109, -194, -1236, -7, -1236, 535, -1145, 745, -977, 909, -756, 989, 857, 994, 1026, 937, 1150, 831, 1270, 680, 1340, 455, 1333, -32, 1244, -148, 1046, -336, 932, -400, 687, -492, 569, -515, 60, -525, -230, -527, -454, -525, -541, -515)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1949369106]
+curve = SubResource("Curve2D_cp6e5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=949713007]
+unique_name_in_owner = true
+position = Vector2(-806, -371)
+rotation = 2.4177787
+
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
