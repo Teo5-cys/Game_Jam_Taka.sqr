@@ -15,7 +15,7 @@ y_sort_enabled = true
 script = ExtResource("1_qclsr")
 
 [node name="Timer2" type="Timer" parent="." unique_id=1969242011]
-wait_time = 90.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
@@ -27,17 +27,19 @@ autostart = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2026518299]
 z_index = -1
-position = Vector2(41, 121)
-scale = Vector2(1.4907225, 1.8202149)
+position = Vector2(-28.427902, -152.99991)
+scale = Vector2(2.0580351, 2.6350627)
 texture = ExtResource("2_l26od")
 
 [node name="ArenaBorders" type="StaticBody2D" parent="." unique_id=1805192637]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ArenaBorders" unique_id=1660025744]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ArenaBorders" unique_id=254754903]
 build_mode = 1
-polygon = PackedVector2Array(-837, -401, -1000, -308, -1109, -194, -1236, -7, -1236, 535, -1145, 745, -977, 909, -756, 989, 857, 994, 1026, 937, 1150, 831, 1270, 680, 1340, 455, 1333, -32, 1244, -148, 1046, -336, 932, -400, 687, -492, 569, -515, 60, -525, -230, -527, -454, -525, -541, -515)
+polygon = PackedVector2Array(-1525, -694, -1622, -540, -1701, -389, -1755, -189, -1755, 200, -1726, 571, -1588, 814, -1296, 1027, -999, 1064, -644, 1077, -477, 1098, -464, 1006, -385, 985, -302, 1010, -302, 1052, 229, 1064, 242, 985, 400, 981, 413, 1073, 960, 1093, 1252, 1027, 1407, 918, 1541, 759, 1678, 534, 1687, 354, 1708, 87, 1683, -168, 1549, -506, 1470, -728, 1315, -811, 1064, -953, 693, -1029, 304, -1045, -460, -1041, -820, -1024, -1166, -907)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1949369106]
+position = Vector2(-46.301697, -323.41452)
+scale = Vector2(1.3370289, 1.4537752)
 curve = SubResource("Curve2D_cp6e5")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=949713007]
