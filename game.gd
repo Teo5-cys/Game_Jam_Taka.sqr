@@ -1,6 +1,6 @@
 extends Node2D
 
-const MAX_MOBS = 20
+const MAX_MOBS = 10
 
 var mob_count = 0
 
