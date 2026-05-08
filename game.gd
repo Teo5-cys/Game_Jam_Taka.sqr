@@ -31,4 +31,14 @@ func _on_timer_2_timeout() -> void:
 	end_game()
 func end_game():
 	get_tree().paused=true 
-	
+
+@onready var game_timer = $Timer2
+@onready var time_label = $CanvasLayer/TimeLabel
+
+func _process(_delta):
+	if game_timer and time_label:
+		var time_left = int(game_timer.time_left)
+		var minutes = time_left / 60
+		var seconds = time_left % 60
+		time_label.text = "%02d:%02d" % [minutes, seconds]
+		
