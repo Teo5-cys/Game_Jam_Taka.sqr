@@ -1,19 +1,26 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778279908
+::res://::1778326117
+32x32_PixelWeapons_Free.png::CompressedTexture2D::783942694572539552::1778324841::1778325522::1::::<><><>0<>0<>380826cc03eb7b5b2b6aa44ada85d5a1<>res://.godot/imported/32x32_PixelWeapons_Free.png-81307bd8bbdb10c248e01611094633b6.ctex::
 All_Fire_Bullet_Pixel_16x16_02.png::CompressedTexture2D::3136577639094221236::1778279908::1778279908::1::::<><><>0<>0<>fb2f2afec51d3c18afd335d4f1604509<>res://.godot/imported/All_Fire_Bullet_Pixel_16x16_02.png-43949ac5ab355f89484cd25d0d8afda2.ctex::
 background.png::CompressedTexture2D::1186142604682696355::1778197320::1778197341::1::::<><><>0<>0<>e20c90840b30249b0fd4ef45531efd6f<>res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex::
 bullet_2d.gd::GDScript::5756550784046680375::1778271254::0::1::::<>Area2D<><>0<>0<><>::
 bullet_2d.tscn::PackedScene::3645470024051463521::1778271254::0::1::::<><><>0<>0<><>::uid://coarsyh1eafkp::::res://bullet_2d.gd<>uid://dftkbqwsfd68r::::res://pistol/projectile.png
+bull_kusanagi.gd::GDScript::6037513488575694691::1778324841::0::1::::<>Area2D<><>0<>0<><>::
+bull_kusanagi.tscn::PackedScene::7155762356195828027::1778324841::0::1::::<><><>0<>0<><>::uid://csau72u6hf3dv::::res://bull_kusanagi.gd<>uid://bp3uc5bs042ck::::res://Green Effect and Bullet 16x16.png
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1778190972::0::1::::<><><>0<>0<><>::
 game.gd::GDScript::8436459038756774411::1778271601::0::1::::<>Node2D<><>0<>0<><>::
+Green Effect and Bullet 16x16.png::CompressedTexture2D::3498275404918125490::1778324841::1778325522::1::::<><><>0<>0<>9822285629c5786d47af99a919e2c779<>res://.godot/imported/Green Effect and Bullet 16x16.png-1d76392b19a2eb2dafd67cb61f2a787c.ctex::
 gun.gd::GDScript::2880344380722337264::1778271254::0::1::::<>Area2D<><>0<>0<><>::
 gun.tscn::PackedScene::5840278233081519294::1778194743::0::1::::<><><>0<>0<><>::uid://bhbi365xsk225::::res://gun.gd<>uid://cswb5do8rrj7q::::res://pistol/pistol.png
 icon.png::CompressedTexture2D::3850624499632875500::1778190972::1778191021::1::::<><><>0<>0<>08328dee63a8ba762d4beb129ea8dc66<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+kusanagi.gd::GDScript::4931532144657995434::1778324841::0::1::::<>Area2D<><>0<>0<><>::
+kusanagi.tscn::PackedScene::4925590312971363829::1778324841::0::1::::<><><>0<>0<><>::uid://cci4u4xm6pymk::::res://kusanagi.gd<>uid://lf0olokiw2ca::::res://32x32_PixelWeapons_Free.png
 mob.gd::GDScript::1001648200538875950::1778277797::0::1::::<>CharacterBody2D<><>0<>0<><>::
 mob.tscn::PackedScene::9081061977632875729::1778271437::0::1::::<><><>0<>0<><>::uid://ojg88pe48jk5::::res://mob.gd<>uid://ogik4s70pgwl::::res://characters/slime/slime.tscn
 player.gd::GDScript::3050301764329180417::1778278834::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::8470111591400466706::1778190972::0::1::::<><><>0<>0<><>::uid://bjpua3hfywlnl::::res://player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn<>uid://cphcr81upg72i::::res://gun.tscn
-survivors_game.tscn::PackedScene::8591458836669554224::1778279366::0::1::::<><><>0<>0<><>::uid://dsgxioo8wstff::::res://game.gd<>uid://dsw8raqgacxsc::::res://player.tscn<>uid://q5tuijwqsnc2::::res://background.png
+survivors_game.tscn::PackedScene::8591458836669554224::1778281132::0::1::::<><><>0<>0<><>::uid://dsgxioo8wstff::::res://game.gd<>uid://dsw8raqgacxsc::::res://player.tscn<>uid://q5tuijwqsnc2::::res://background.png
+xp.tscn::PackedScene::984902432203955421::1778280689::0::1::::<><><>0<>0<><>::uid://b2pw6skm05ljd::::res://xp.gd<>uid://bkxm8fvlf60g3::::res://All_Fire_Bullet_Pixel_16x16_02.png
 ::res://addons/::1778272772
 ::res://addons/colorpicker_presets/::1778272772
 colorpicker_presets.gd::GDScript::8382802027330247951::1778190972::0::1::::<>EditorPlugin<><>0<>1<><>::
