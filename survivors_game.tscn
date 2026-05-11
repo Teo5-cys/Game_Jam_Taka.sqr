@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dsgxioo8wstff" path="res://game.gd" id="1_qclsr"]
 [ext_resource type="PackedScene" uid="uid://dsw8raqgacxsc" path="res://player.tscn" id="2_a7q7f"]
 [ext_resource type="Texture2D" uid="uid://q5tuijwqsnc2" path="res://background.png" id="2_l26od"]
+[ext_resource type="PackedScene" uid="uid://dwrgl1ygwlqyn" path="res://pause.tscn" id="2_qqaft"]
 
 [sub_resource type="Curve2D" id="Curve2D_cp6e5"]
 _data = {
@@ -16,6 +17,11 @@ bg_color = Color(0.23529412, 0.8745098, 0.8627451, 1)
 [node name="Game" type="Node2D" unique_id=327747119]
 y_sort_enabled = true
 script = ExtResource("1_qclsr")
+
+[node name="pause_menu" parent="." unique_id=1246419695 instance=ExtResource("2_qqaft")]
+offset = Vector2(0, 0)
+scale = Vector2(1.2, 1)
+transform = Transform2D(1.2, 0, 0, 1, 0, 0)
 
 [node name="Timer2" type="Timer" parent="." unique_id=1969242011]
 wait_time = 60.0
