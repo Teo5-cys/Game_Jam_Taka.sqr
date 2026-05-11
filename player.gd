@@ -17,10 +17,15 @@ var damage_cooldown: float = 0.0
 
 func _ready():
 	current_health = max_health
-	%HealthBar.max_value = max_health
-	%HealthBar.value = current_health
-	%XPBar.max_value = xp_required
-	%XPBar.value = current_xp
+	
+	# SAFETY CHECK: Only update UI if it actually exists in the current scene
+	if get_node_or_null("%HealthBar"):
+		%HealthBar.max_value = max_health
+		%HealthBar.value = current_health
+		
+	if get_node_or_null("%XPBar"):
+		%XPBar.max_value = xp_required
+		%XPBar.value = current_xp
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -40,7 +45,11 @@ func _physics_process(delta):
 	
 	if overlapping_mobs.size() > 0 and damage_cooldown <= 0.0:
 		current_health -= 1 * overlapping_mobs.size()
-		%HealthBar.value = current_health
+		
+		# SAFETY CHECK for the health bar
+		if get_node_or_null("%HealthBar"):
+			%HealthBar.value = current_health
+			
 		damage_cooldown = 0.5 
 		
 		if current_health <= 0:
@@ -49,7 +58,11 @@ func _physics_process(delta):
 
 func gain_xp(amount: int):
 	current_xp += amount
-	%XPBar.value = current_xp
+	
+	# SAFETY CHECK for the XP bar
+	if get_node_or_null("%XPBar"):
+		%XPBar.value = current_xp
+		
 	print("XP: ", current_xp, "/", xp_required) 
 	
 	if current_xp >= xp_required:

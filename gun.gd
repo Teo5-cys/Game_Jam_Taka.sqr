@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@onready var player = get_node("/root/Game/Player")
+@onready var player = get_parent()
 
 func _process(_delta):
 	look_at(get_global_mouse_position())
